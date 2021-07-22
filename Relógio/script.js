@@ -1,7 +1,7 @@
-let digitalElement = document.querySelector(".digital");
-let sElement = document.querySelector(".p_s");
-let mElement = document.querySelector(".p_m");
-let hElement = document.querySelector(".p_h");
+let digitalElement = document.querySelector('.digital');
+let sElement = document.querySelector('.p_s');
+let mElement = document.querySelector('.p_m');
+let hElement = document.querySelector('.p_h');
 
 function updateClock() {
   let now = new Date();
@@ -15,9 +15,7 @@ function updateClock() {
 }
 
 function digitalClock(hour, minute, second) {
-  digitalElement.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(
-    second
-  )}`;
+  digitalElement.innerHTML = `${fixZero(hour)}:${fixZero(minute)}:${fixZero(second)}`;
 }
 
 function analogClock(hour, minute, second) {
@@ -31,21 +29,18 @@ function analogClock(hour, minute, second) {
 }
 
 function getColors(hour) {
-  let body = document.querySelector("body");
-  let title = document.querySelector("#time_day");
+  let body = document.querySelector('body');
+  let title = document.querySelector('#time_day');
 
   if (hour < 12 && hour > 6) {
-    body.style.background =
-      "linear-gradient(90deg, rgba(235,194,73,1) 0%, rgba(43,255,231,1) 100%)";
-    title.innerText = "Bom dia!";
+    body.style.background = 'linear-gradient(90deg, rgba(235,194,73,1) 0%, rgba(43,255,231,1) 100%)';
+    title.innerText = 'Bom dia!';
   } else if (hour >= 12 && hour <= 18) {
-    body.style.background =
-      "linear-gradient(90deg, rgba(0,140,131,1) 0%, rgba(23,53,110,1) 100%)";
-    title.innerText = "Boa Tarde!";
+    body.style.background = 'linear-gradient(90deg, rgba(0,140,131,1) 0%, rgba(23,53,110,1) 100%)';
+    title.innerText = 'Boa Tarde!';
   } else {
-    body.style.background =
-      "linear-gradient(90deg, rgba(23,53,110,1) 0%, rgba(12,17,27,1) 100%)";
-    title.innerText = "Boa Noite!";
+    body.style.background = 'linear-gradient(90deg, rgba(23,53,110,1) 0%, rgba(12,17,27,1) 100%)';
+    title.innerText = 'Boa Noite!';
   }
 }
 

@@ -1,12 +1,12 @@
-document.body.addEventListener("keyup", (event) => {
+document.body.addEventListener('keyup', (event) => {
   playSound(event.code.toLowerCase());
 });
 
-document.querySelector(".composer button").addEventListener("click", () => {
-  let song = document.querySelector("#input").value;
+document.querySelector('.composer button').addEventListener('click', () => {
+  let song = document.querySelector('#input').value;
 
-  if (song !== "") {
-    let songArray = song.split("");
+  if (song !== '') {
+    let songArray = song.split('');
     playComposition(songArray);
   }
 });
@@ -21,10 +21,10 @@ function playSound(sound) {
   }
 
   if (keyElement) {
-    keyElement.classList.add("active");
+    keyElement.classList.add('active');
 
     setTimeout(() => {
-      keyElement.classList.remove("active");
+      keyElement.classList.remove('active');
     }, 100);
   }
 }

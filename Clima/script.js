@@ -1,3 +1,5 @@
+const localvar = require('../localvar');
+
 document.querySelector('.busca').addEventListener('submit', async (event) => {
   event.preventDefault();
 
@@ -7,7 +9,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
     clearInfo();
     showWarning('Carregando...');
 
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=930d5f4249210a67de15134ee5c94f03&units=metric&lang=pt_br`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input)}&appid=${localvar.apikey}&units=metric&lang=pt_br`;
 
     let results = await fetch(url);
     let json = await results.json();
